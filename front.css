@@ -1,0 +1,91 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f6fb;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  position: sticky; top: 0;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 15px 8%;
+  background: #1e2a47; color: white;
+  z-index: 10;
+}
+.logo { font-weight: bold; font-size: 1.2rem; }
+.navbar nav a {
+  color: white; text-decoration: none; margin-left: 20px;
+}
+.navbar nav a:hover { color: #5fa8ff; }
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 70px 20px;
+  background: linear-gradient(135deg, #1e2a47, #3a5ba0);
+  color: white;
+}
+.profile-pic {
+  width: 160px; height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid white;
+  background: #ccc;
+  margin-bottom: 20px;
+}
+.hero h1 { font-size: 2.4rem; }
+.subtitle { opacity: 0.85; margin-bottom: 25px; }
+.links a {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 22px;
+  border: 2px solid white;
+  border-radius: 25px;
+  color: white; text-decoration: none;
+  transition: 0.3s;
+}
+.links a:hover { background: white; color: #1e2a47; }
+
+/* Sections */
+.section { max-width: 900px; margin: 50px auto; padding: 0 20px; }
+.section h2 {
+  color: #1e2a47; margin-bottom: 20px;
+  border-left: 5px solid #3a5ba0; padding-left: 10px;
+}
+
+/* Skills */
+.skills span {
+  display: inline-block;
+  background: #3a5ba0; color: white;
+  padding: 8px 16px; margin: 5px;
+  border-radius: 20px;
+}
+
+/* Projects */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+.card {
+  background: white; padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+.card:hover { transform: translateY(-5px); }
+.card h3 { color: #1e2a47; margin-bottom: 8px; }
+.card a { color: #3a5ba0; text-decoration: none; font-weight: bold; }
+
+footer {
+  text-align: center; padding: 20px;
+  background: #1e2a47; color: white; margin-top: 50px;
+}
+
+@media (max-width: 600px) {
+  .navbar { flex-direction: column; gap: 10px; }
+  .navbar nav a { margin: 0 8px; }
+}
